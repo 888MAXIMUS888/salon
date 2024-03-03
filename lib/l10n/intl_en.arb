@@ -1,0 +1,7 @@
+{
+    "allProducts": "All Products",
+    "quantity": "Quantity:",
+    "basket": "Basket",
+    "totalPrice": "Total price:",
+    "emptyBasket": "The basket is empty"
+}

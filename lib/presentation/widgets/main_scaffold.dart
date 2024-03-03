@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:salon/presentation/themes/colors.dart';
 
-class MainScaffold extends StatefulWidget {
+class MainScaffold extends StatelessWidget {
   final Widget body;
   final String? appBarTitle;
   final Widget? floatingActionButton;
@@ -17,21 +17,16 @@ class MainScaffold extends StatefulWidget {
       super.key});
 
   @override
-  State<MainScaffold> createState() => _MainScaffoldState();
-}
-
-class _MainScaffoldState extends State<MainScaffold> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        floatingActionButton: widget.floatingActionButton,
-        appBar: widget.appBarTitle != null
+        floatingActionButton: floatingActionButton,
+        appBar: appBarTitle != null
             ? AppBar(
                 backgroundColor: backgroundColor,
-                title: Text(widget.appBarTitle ?? ''),
-                actions: widget.actions,
+                title: Text(appBarTitle ?? ''),
+                actions: actions,
               )
             : null,
-        body: widget.body);
+        body: body);
   }
 }
